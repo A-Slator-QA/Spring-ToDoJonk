@@ -19,6 +19,7 @@ pipeline {
             steps {
                 sh '''
                 java -jar /jenkins/project-wars/project-${BUILD_NUMBER}.war
+                '''
             }
         }
     }
