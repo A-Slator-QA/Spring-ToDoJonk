@@ -16,7 +16,6 @@ pipeline {
                 mvn clean install
                 mkdir -p /home/jenkins/project-wars
                 mv ./target/*.war /home/jenkins/project-wars/project-${BUILD_NUMBER}.war
-                EOF
                 '''
             }
         }
@@ -36,7 +35,6 @@ WantedBy=multi-user.target' > /home/jenkins/MyApp.service
                 sudo mv /home/jenkins/MyApp.service /etc/systemd/system/MyApp.service
                 sudo systemctl daemon-reload
                 sudo systemctl restart MyApp
-                EOF
                 '''
             }
         }
